@@ -1,0 +1,11 @@
+Open cmd
+Go to the directory where this file is located
+
+Run these:
+
+docker build -t dump15 -f Dockerfile.dockerfile .
+docker run --name dump -it migration
+
+#to exit the container while still keeping it alive
+CTRL + P then CTRL + Q 
+docker cp dump:/tmp/olddb.sql ./olddb.sql
