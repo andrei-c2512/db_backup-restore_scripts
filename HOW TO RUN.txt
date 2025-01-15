@@ -3,9 +3,18 @@ Go to the directory where this file is located
 
 Run these:
 
-docker build -t dump15 -f Dockerfile.dockerfile .
+docker build -t dump15 -f Pg15Dump.dockerfile .
 docker run --name dump -it migration
 
 #to exit the container while still keeping it alive
 CTRL + P then CTRL + Q 
 docker cp dump:/tmp/olddb.sql ./olddb.sql
+
+#now we have sucessfully created a pg15 database and dumped it on our computer
+
+
+#restore
+docker build -t upgrade17 --f Pg17Upgrade.dockerfile .
+docker run -it upgrade17
+
+#now we have sucessfully restored the database to postgres17
