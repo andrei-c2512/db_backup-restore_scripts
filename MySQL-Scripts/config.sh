@@ -1,0 +1,9 @@
+CONTAINER_NAME=mysql_db
+DB_NAME=leafy_department
+TAG=latest
+USER=root
+PASSWORD=joemama123
+WINDOWS_PREFIX=""
+BACKUP_FILE_NAME=backup.sql
+LOCAL_BACKUP_DIR=/tmp/backup
+BACKUP_DIR=/data
